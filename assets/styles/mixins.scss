@@ -1,0 +1,117 @@
+@mixin f-size($size: m, $weight: 400) {
+  font-weight: $weight;
+
+  //@if $size == h1 {
+  //  font-size: 44px;
+  //  line-height: 6px;
+  //}
+  //@if $size == h2 {
+  //  font-size: 38px;
+  //  line-height: 52px;
+  //}
+  //@if $size == h3 {
+  //  font-size: 24px;
+  //  line-height: 32px;
+  //}
+  //@if $size == h4 {
+  //  font-size: 20px;
+  //  line-height: 28px;
+  //}
+  @if $size == h5 {
+    font-size: 3.2rem;
+    line-height: 2.88rem;
+  }
+  @if $size == xxl {
+    font-size: 2.4rem;
+    line-height: 3.84rem;
+  }
+  @if $size == xl {
+    font-size: 2.2rem;
+    line-height: 2.86rem;
+  }
+  @if $size == al {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+  @if $size == l {
+    font-size: 1.9rem;
+    line-height: 2.47rem;
+  }
+  @if $size == ml {
+    font-size: 1.8rem;
+    font-weight: 2.34rem;
+  }
+  @if $size == m {
+    font-size: 1.6rem;
+    line-height: 2.08rem;
+  }
+  @if $size == sl {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+  @if $size == sk {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  @if $size == sm {
+    font-size: 1.33rem;
+    line-height: 1.621rem;
+  }
+  @if $size == s {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+
+@mixin brightGradient {
+  background: conic-gradient(from 180deg at 50.93% 50%, #000000 0deg, rgba(255, 255, 255, 0.72) 16.88deg, #000000 88.12deg, rgba(255, 255, 255, 0.72) 151.87deg, #000000 225deg, rgba(255, 255, 255, 0.72) 288.75deg, #000000 360deg), radial-gradient(78.31% 80.25% at 11.77% 28.24%, rgba(110, 124, 251, 0.52) 7.61%, rgba(251, 66, 255, 0.52) 35.14%, rgba(255, 66, 247, 0.52) 63.45%, rgba(66, 119, 255, 0.52) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, conic-gradient(from 180deg at 49.45% 50%, #E8EDF1 -3.44deg, #D6DFE6 56.25deg, #FAFBFC 133.38deg, #F6D0FF 215.62deg, #D7E0E7 311.43deg, #F7F8F9 313.84deg, #E8EDF1 356.56deg, #D6DFE6 416.25deg), #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-blend-mode: screen, normal, normal, normal;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: matrix(1, 0, -0.2, 0.98, 0, 0);
+}
+
+
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin xl {
+  @media (min-width: 1919px) {
+    @content;
+  }
+}
+@mixin l {
+  @media (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin m {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin s {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
