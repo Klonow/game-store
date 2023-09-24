@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   alias: {
-    assets: "/<rootDir>/assets",
+    "assets": "/<rootDir>/assets",
   },
   modules: [
     '@nuxt/image-edge',

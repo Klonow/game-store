@@ -4,6 +4,8 @@ $color-dark-3: #171320;
 $color-dark-4: #13101B;
 $color-dark-5: #000000;
 
+$color-red: #FF4C00;
+
 $color-white: #FFFFFF;
 
 $color-grey: #606367;
@@ -13,6 +15,9 @@ $color-grey-4: #CDCDCF;
 $color-grey-5: #63686D;
 $color-grey-6: #3D394A;
 $color-grey-7: #747474;
+$color-grey-8: rgba(255, 255, 255, 0.50);
+
+$color-yellow: #FFE817;
 
 $color-green: #77BE1D;
 $color-blue: #4277FF;
@@ -42,3 +47,7 @@ $z-modal-below: 700;
 $z-modal: 800;
 $z-modal-above: 900;
 $z-above-scroll: 10000000000;
+
+
+$promo-card-gradient-green: linear-gradient(131deg, #1DBE53 -11.11%, #ACE238 73.42%);
+$promo-card-gradient-orange: linear-gradient(131.39deg, #FF3D23 -11.11%, #FDA828 73.42%);

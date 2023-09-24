@@ -13,10 +13,10 @@
   //  font-size: 24px;
   //  line-height: 32px;
   //}
-  //@if $size == h4 {
-  //  font-size: 20px;
-  //  line-height: 28px;
-  //}
+  @if $size == h4 {
+    font-size: 3.6rem;
+    line-height: 4.32rem;
+  }
   @if $size == h5 {
     font-size: 3.2rem;
     line-height: 2.88rem;
@@ -39,7 +39,7 @@
   }
   @if $size == ml {
     font-size: 1.8rem;
-    font-weight: 2.34rem;
+    line-height: 2.34rem;
   }
   @if $size == m {
     font-size: 1.6rem;
@@ -62,6 +62,8 @@
     line-height: 1.5rem;
   }
 }
+
+
 
 @mixin brightGradient {
   background: conic-gradient(from 180deg at 50.93% 50%, #000000 0deg, rgba(255, 255, 255, 0.72) 16.88deg, #000000 88.12deg, rgba(255, 255, 255, 0.72) 151.87deg, #000000 225deg, rgba(255, 255, 255, 0.72) 288.75deg, #000000 360deg), radial-gradient(78.31% 80.25% at 11.77% 28.24%, rgba(110, 124, 251, 0.52) 7.61%, rgba(251, 66, 255, 0.52) 35.14%, rgba(255, 66, 247, 0.52) 63.45%, rgba(66, 119, 255, 0.52) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, conic-gradient(from 180deg at 49.45% 50%, #E8EDF1 -3.44deg, #D6DFE6 56.25deg, #FAFBFC 133.38deg, #F6D0FF 215.62deg, #D7E0E7 311.43deg, #F7F8F9 313.84deg, #E8EDF1 356.56deg, #D6DFE6 416.25deg), #FFFFFF;

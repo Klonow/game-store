@@ -9,7 +9,7 @@
         <div class="popular-product-card__above-img-content"></div>
         <div class="popular-product-card__above-img-footer">
           <BaseButton
-            view="green"
+            view="primary"
             font-size="m"
             full-width
             indent="l"
@@ -26,15 +26,7 @@
       </div>
       <div class="popular-product-card__content-bottom">
         <p class="popular-product-card__title">{{ product.title }}</p>
-        <ol
-          v-if="product.tags.length"
-          class="popular-product-card__tags"
-        >
-          <li
-            v-for="tag in product.tags"
-            class="popular-product-card__tag"
-          >{{ tag }}</li>
-        </ol>
+        <BaseTags :tags="product.tags" />
       </div>
     </div>
   </div>
@@ -100,32 +92,6 @@ const props = defineProps<{product: PopularProduct}>()
   &__old-price {
     @include f-size(ml, 400);
     color: rgba($color-white, 20%)
-  }
-
-  &__tags {
-    display: flex;
-
-    & > *:not(:last-child) {
-      margin-right: 2rem;
-    }
-  }
-
-  &__tag {
-    display: flex;
-    align-items: center;
-    color: $color-grey-7;
-    @include f-size(sk, 500);
-
-    &:before {
-      display: inline-block;
-      content: '';
-      width: 1.4rem;
-      height: 1.4rem;
-      background: $color-grey-6;
-      border-radius: 50%;
-      opacity: 50%;
-      margin-right: .9rem;
-    }
   }
 }
 </style>

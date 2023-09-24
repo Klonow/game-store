@@ -16,7 +16,7 @@
         <div class="language-and-currency-dropdown__languages">
           <BaseButton
             v-for="language in Object.keys(Language)"
-            :view="language === userStore.language ? 'green' : 'transparent'"
+            :view="language === userStore.language ? 'primary' : 'clearly'"
             indent="s"
             fullWidth
             @click="userStore.setLanguage(language)"
@@ -27,7 +27,7 @@
         <div class="language-and-currency-dropdown__currencies">
           <BaseButton
             v-for="currency in Object.keys(Currency)"
-            :view="currency === userStore.currency ? 'green' : 'transparent'"
+            :view="currency === userStore.currency ? 'primary' : 'clearly'"
             indent="s"
             fullWidth
             @click="userStore.setCurrency(currency)"

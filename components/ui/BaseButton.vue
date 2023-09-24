@@ -10,7 +10,7 @@
 import {computed} from "@vue/reactivity";
 
 interface BaseButtonProps {
-  view?: 'green' | 'grey' | 'transparent' | 'opacity' | 'white',
+  view?: 'primary' | 'secondary' | 'grey' | 'transparent' | 'clearly' | 'clearly-white',
   type?: 'submit' | 'button',
   indent?: 'xs' | 's' | 'm' | 'l',
   fontSize?: 'xs' | 's' | 'm',
@@ -19,12 +19,12 @@ interface BaseButtonProps {
 }
 
 const props = withDefaults(defineProps<BaseButtonProps>(), {
-  view: 'transparent',
+  view: 'clearly',
   type: 'button',
   indent: 'xs',
   fontSize: 's',
   fullWidth: false,
-  borderRadius: 'xs'
+  borderRadius: 'xs',
 })
 
 const classList = computed(() => ([
@@ -41,7 +41,6 @@ const classList = computed(() => ([
   $color,
   $color-bg,
   $color-border: none,
-  $border-radius: 0,
   $color-hover: none,
   $color-hover-bg: none,
   $color-hover-border: none,
@@ -49,7 +48,6 @@ const classList = computed(() => ([
   color: $color;
   background-color: $color-bg;
   border-color: $color-border;
-  border-radius: $border-radius;
 
   &:hover {
     color: $color-hover;
@@ -70,46 +68,37 @@ const classList = computed(() => ([
   }
 
   &_view {
-    &_green {
+    &_primary {
       @include regular-button(
-        $color-white,
-        $color-green,
-        none,
-        none,
-        $color-white,
-        rgba($color-green, 0.8),
-      )
-    }
-
-    &_grey {
-      color: $color-white;
-      background-color: $color-dark-3;
-
-      &:hover {
-        background-color: rgba($color-green, 0.5);
-      }
-    }
-
-    &_opacity {
-      @include regular-button(
-        $color-white,
-        rgba($color-white, 5%),
-        none,
-        1.5rem,
-        $color-dark-5,
-        $color-white,
+        $color-white, $color-green, none,$color-white, rgba($color-green, 0.8)
       );
     }
 
-    &_transparent {
-      color: $color-white;
-      padding: .4rem 1rem;
+    &_secondary {
+      @include regular-button(
+        $color-white, rgba($color-white, 5%), none, $color-dark-5, $color-white
+      );
+    }
 
-      &:hover {
-        background-color: rgba($color-green, 0.5);
-      }
+    &_clearly {
+      @include regular-button(
+        $color-white, none, none, $color-white, rgba($color-green, 0.5)
+      );
+    }
+
+    &_clearly-white {
+      @include regular-button(
+        $color-white, none, none, $color-white, rgba($color-white, 0.1)
+      );
+    }
+
+    &_grey {
+      @include regular-button(
+        $color-white, $color-dark-3, none, $color-white, rgba($color-green, 0.5)
+      );
     }
   }
+
 
   &_font-size {
     &_xs {

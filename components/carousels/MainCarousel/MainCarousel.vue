@@ -21,12 +21,12 @@
           </div>
           <div class="main-carousel__slide-content-btns">
             <BaseButton
-              view="opacity"
+              view="secondary"
               indent="l"
               font-size="m"
             >В корзину</BaseButton>
             <BaseButton
-              view="opacity"
+              view="secondary"
               indent="l"
               font-size="m"
             >В избранное</BaseButton>
