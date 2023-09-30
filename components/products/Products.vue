@@ -7,8 +7,7 @@
         <IconLightning />
       </div>
       <PopularProducts />
-      <PromoProductCardMinecraftCreeper />
-      <PromoProductCardMinecraftHunters />
+      <PromoCardsCarousel />
     </BaseWrapper>
   </div>
 </template>
